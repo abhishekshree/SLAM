@@ -37,9 +37,9 @@ class Particle(object):
 
     def updateWeight(self, Q: np.ndarray, z: np.ndarray) -> None:
         self.weight = (
-            2
+            (2
             * np.pi
-            * np.linalg.det(Q) ** -0.5
+            * np.linalg.det(Q)) ** -0.5
             * np.exp(
                 -0.5
                 * np.dot(
